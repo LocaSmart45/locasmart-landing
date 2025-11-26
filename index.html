@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logiciel Conciergerie & Channel Manager | LocaSmart</title>
-    <meta name="description" content="Solution de gestion tout-en-un pour conciergeries LCD. Channel Manager, facturation automatique et espace propriétaires. Testez le PMS français de référence.">
-    <meta name="keywords" content="logiciel conciergerie, channel manager airbnb, pms location courte durée, facturation propriétaire, gestion locative saisonnière">
+    <title>LocaSmart | Le PMS & Channel Manager des Conciergeries Modernes</title>
+    <meta name="description" content="Pilotez votre activité de gestion locative : Synchronisation Airbnb/Booking, Facturation automatique et Espace Propriétaires. Essai gratuit 14 jours.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -17,196 +15,327 @@
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
                     colors: { 
                         brand: { 
-                            bg: '#0F172A',       // Fond sombre corporate
-                            surface: '#1E293B',  // Éléments UI
-                            primary: '#6366F1',  // Indigo (Confiance & Tech)
-                            primaryDark: '#4F46E5',
-                            accent: '#38BDF8',   // Bleu ciel (Dynamisme)
-                            success: '#10B981'
+                            primary: '#4F46E5',   // Indigo 600
+                            secondary: '#7C3AED', // Violet 600
+                            dark: '#0F172A',      // Slate 900
+                            light: '#F8FAFC'      // Slate 50
                         } 
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(79, 70, 229, 0.3)',
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)'
                     }
                 }
             }
         }
     </script>
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.5); }
+    </style>
 </head>
-<body class="bg-brand-bg text-slate-300 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-white text-slate-600 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-brand-bg/95 backdrop-blur-md border-b border-white/5 shadow-sm">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-slate-100 transition-all">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-9 h-9 bg-gradient-to-br from-brand-primary to-brand-primaryDark rounded-lg flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition">
-                    <i class="fa-solid fa-bolt text-sm"></i>
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-bolt text-lg"></i>
                 </div>
-                <span class="text-xl font-bold text-white tracking-tight">LocaSmart</span>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">LocaSmart</span>
             </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="fonctionnalites.html" class="hover:text-white transition duration-200">Fonctionnalités</a>
-                <a href="tarifs.html" class="hover:text-white transition duration-200">Tarifs</a>
-                <a href="contact.html" class="hover:text-white transition duration-200">Contact</a>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600">
+                <a href="fonctionnalites.html" class="hover:text-brand-primary transition">Fonctionnalités</a>
+                <a href="tarifs.html" class="hover:text-brand-primary transition">Tarifs</a>
+                <a href="contact.html" class="hover:text-brand-primary transition">Contact</a>
             </div>
 
             <div class="flex gap-4 items-center">
-                <a href="https://app.locasmart.net" class="text-sm font-semibold hover:text-white transition duration-200 hidden sm:block">Connexion</a>
-                <a href="https://app.locasmart.net/register" class="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-lg text-sm font-bold transition shadow-md shadow-indigo-500/20 hover:shadow-indigo-500/40">
+                <a href="https://app.locasmart.net" class="text-sm font-bold text-slate-600 hover:text-brand-primary transition hidden sm:block">Connexion</a>
+                <a href="https://app.locasmart.net/register" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl text-sm font-bold transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     Essai gratuit
                 </a>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-32 pb-24 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section class="pt-32 pb-20 hero-gradient overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-100/50 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4"></div>
 
-        <div class="container mx-auto px-6 text-center relative z-10 max-w-5xl">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-brand-accent mb-8">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-indigo-100 shadow-sm text-sm font-bold text-brand-primary mb-8 animate-fade-in-up">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
                 </span>
-                La solution de référence pour les gestionnaires
+                Nouveau : Synchronisation iCal V2 ultra-rapide
             </div>
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
-                Optimisez la gestion de votre<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-indigo-400 to-brand-accent">conciergerie locative.</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                Gérez votre empire locatif<br>
+                <span class="gradient-text">sans y passer vos nuits.</span>
             </h1>
             
-            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Centralisez vos réservations, automatisez votre facturation et offrez une transparence totale à vos propriétaires. Une plateforme unique pour piloter votre croissance.
+            <p class="text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Le système d'exploitation complet pour conciergeries. <br>
+                <strong>Channel Manager</strong>, <strong>Facturation</strong> et <strong>Portail Propriétaires</strong> réunis en un seul endroit.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a href="https://app.locasmart.net/register" class="w-full sm:w-auto bg-white text-brand-bg px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition shadow-xl flex items-center justify-center gap-2">
-                    Débuter mon essai (14 jours) <i class="fa-solid fa-arrow-right text-sm"></i>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
+                <a href="https://app.locasmart.net/register" class="w-full sm:w-auto bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-glow transition transform hover:-translate-y-1">
+                    Démarrer l'essai gratuit (14j)
                 </a>
-                <a href="fonctionnalites.html" class="w-full sm:w-auto bg-brand-surface border border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-surface/80 transition flex items-center justify-center">
-                    Découvrir les outils
+                <a href="#demo" class="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition shadow-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play text-brand-primary text-sm"></i> Voir la démo
                 </a>
             </div>
 
-            <div class="border-t border-white/5 pt-10">
-                <p class="text-sm text-slate-500 font-medium mb-6 uppercase tracking-wider">Synchronisation certifiée avec</p>
-                <div class="flex flex-wrap justify-center gap-8 md:gap-12 items-center opacity-40 grayscale hover:grayscale-0 transition duration-500">
-                    <i class="fa-brands fa-airbnb text-3xl text-white"></i>
-                    <i class="fa-brands fa-stripe text-3xl text-white"></i>
-                    <span class="text-xl font-bold text-white">Booking.com</span>
-                    <span class="text-xl font-bold text-white">Expedia</span>
-                    <span class="text-xl font-bold text-white">Vrbo</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="py-20 bg-brand-surface/30 border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition group">
-                    <div class="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-6 text-brand-primary group-hover:scale-110 transition">
-                        <i class="fa-solid fa-shuffle text-xl"></i>
+            <div class="relative max-w-6xl mx-auto transform hover:scale-[1.01] transition duration-700 ease-out" id="demo">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl blur opacity-20"></div>
+                <div class="relative bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex text-left h-[600px] md:h-[700px]">
+                    
+                    <div class="w-64 bg-slate-50 border-r border-slate-100 hidden md:flex flex-col p-6">
+                        <div class="flex items-center gap-2 mb-8 text-slate-900 font-bold">
+                            <div class="w-6 h-6 bg-brand-primary rounded flex items-center justify-center text-white text-xs"><i class="fa-solid fa-bolt"></i></div>
+                            LocaSmart
+                        </div>
+                        <div class="space-y-1">
+                            <div class="px-4 py-2 bg-indigo-50 text-brand-primary rounded-lg font-semibold text-sm flex items-center gap-3">
+                                <i class="fa-solid fa-chart-pie"></i> Tableau de bord
+                            </div>
+                            <div class="px-4 py-2 text-slate-500 hover:bg-slate-100 rounded-lg font-medium text-sm flex items-center gap-3 transition">
+                                <i class="fa-solid fa-calendar-days"></i> Calendrier
+                            </div>
+                            <div class="px-4 py-2 text-slate-500 hover:bg-slate-100 rounded-lg font-medium text-sm flex items-center gap-3 transition">
+                                <i class="fa-solid fa-building"></i> Biens
+                            </div>
+                            <div class="px-4 py-2 text-slate-500 hover:bg-slate-100 rounded-lg font-medium text-sm flex items-center gap-3 transition">
+                                <i class="fa-solid fa-file-invoice"></i> Finances
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="p-4 bg-indigo-600 rounded-xl text-white">
+                                <p class="text-xs font-bold opacity-80 mb-1">Revenus ce mois</p>
+                                <p class="text-2xl font-bold">12 450 €</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Éliminez le surbooking</h3>
-                    <p class="text-slate-400 leading-relaxed">Notre Channel Manager met à jour vos calendriers en temps réel sur toutes les plateformes. Sécurisez votre réputation.</p>
-                </div>
 
-                <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition group">
-                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-file-invoice-dollar text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Facturation simplifiée</h3>
-                    <p class="text-slate-400 leading-relaxed">Commissions, frais de ménage, redditions de comptes : LocaSmart automatise vos calculs comptables mensuels.</p>
-                </div>
+                    <div class="flex-1 flex flex-col bg-white">
+                        <div class="h-16 border-b border-slate-100 flex justify-between items-center px-8">
+                            <h2 class="font-bold text-slate-800">Vue d'ensemble</h2>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"><i class="fa-regular fa-bell"></i></div>
+                                <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white shadow-sm"></div>
+                            </div>
+                        </div>
 
-                <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition group">
-                    <div class="w-12 h-12 bg-sky-500/10 rounded-lg flex items-center justify-center mb-6 text-brand-accent group-hover:scale-110 transition">
-                        <i class="fa-solid fa-chart-pie text-xl"></i>
+                        <div class="p-8 bg-slate-50/50 flex-1 overflow-hidden">
+                            <div class="grid grid-cols-3 gap-6 mb-8">
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-card">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Taux d'occupation</p>
+                                            <p class="text-3xl font-bold text-slate-900 mt-1">84%</p>
+                                        </div>
+                                        <span class="bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full font-bold">+12%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-brand-primary h-full w-[84%]"></div>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-card">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Réservations</p>
+                                            <p class="text-3xl font-bold text-slate-900 mt-1">42</p>
+                                        </div>
+                                        <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded-full font-bold">Nov</span>
+                                    </div>
+                                    <div class="flex -space-x-2">
+                                        <div class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white"></div>
+                                        <div class="w-8 h-8 rounded-full bg-slate-300 border-2 border-white"></div>
+                                        <div class="w-8 h-8 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center text-[10px] text-white font-bold">+39</div>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-card">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Commissions</p>
+                                            <p class="text-3xl font-bold text-slate-900 mt-1">2 890 €</p>
+                                        </div>
+                                        <i class="fa-solid fa-wallet text-indigo-200 text-2xl"></i>
+                                    </div>
+                                    <p class="text-xs text-slate-400">Généré automatiquement</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-xl border border-slate-100 shadow-card overflow-hidden">
+                                <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center">
+                                    <h3 class="font-bold text-slate-800">Arrivées imminentes</h3>
+                                    <button class="text-brand-primary text-sm font-bold">Voir tout</button>
+                                </div>
+                                <div class="divide-y divide-slate-50">
+                                    <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600"><i class="fa-brands fa-airbnb"></i></div>
+                                            <div>
+                                                <p class="font-bold text-slate-900 text-sm">Appartement Hyper-Centre</p>
+                                                <p class="text-xs text-slate-500">Jean Dupont • 3 nuits</p>
+                                            </div>
+                                        </div>
+                                        <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">Confirmé</span>
+                                        <p class="font-bold text-slate-900">450 €</p>
+                                    </div>
+                                    <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600"><i class="fa-brands fa-booking"></i></div>
+                                            <div>
+                                                <p class="font-bold text-slate-900 text-sm">Villa des Pins</p>
+                                                <p class="text-xs text-slate-500">Sarah Connor • 7 nuits</p>
+                                            </div>
+                                        </div>
+                                        <span class="bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full">En attente</span>
+                                        <p class="font-bold text-slate-900">1 200 €</p>
+                                    </div>
+                                    <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600"><i class="fa-solid fa-globe"></i></div>
+                                            <div>
+                                                <p class="font-bold text-slate-900 text-sm">Studio Gare</p>
+                                                <p class="text-xs text-slate-500">Direct • 2 nuits</p>
+                                            </div>
+                                        </div>
+                                        <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">Payé</span>
+                                        <p class="font-bold text-slate-900">180 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Espace Propriétaire</h3>
-                    <p class="text-slate-400 leading-relaxed">Fidélisez vos clients en leur offrant un accès privé pour consulter leurs revenus et taux d'occupation en toute autonomie.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Pourquoi choisir LocaSmart ?</h2>
-                <p class="text-slate-400 text-lg">Conçu par des experts de la gestion locative pour répondre aux exigences du marché français.</p>
+    <div class="bg-slate-900 py-12 border-y border-slate-800">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-slate-400 text-sm font-bold uppercase tracking-widest mb-8">Synchronisation certifiée avec les leaders</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+                <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0">
+                    <i class="fa-brands fa-airbnb text-4xl text-white"></i>
+                    <span class="text-2xl font-bold text-white hidden md:block">Airbnb</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0">
+                    <i class="fa-brands fa-stripe text-4xl text-[#635BFF]"></i> <span class="text-2xl font-bold text-white hidden md:block">Stripe</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-white tracking-tighter">Booking.com</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-white italic">Expedia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-6">Tout ce dont vous avez besoin. Rien de superflu.</h2>
+                <p class="text-lg text-slate-600">Nous avons supprimé la complexité pour ne garder que la puissance.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+                
+                <div class="md:col-span-2 md:row-span-2 bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-xl transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-100 transition"></div>
+                    <div class="relative z-10 h-full flex flex-col">
+                        <div class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-indigo-500/30">
+                            <i class="fa-solid fa-sync"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Channel Manager Temps Réel</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Oubliez les fichiers Excel. Une réservation arrive sur Airbnb ? Elle bloque instantanément Booking.com. Fini le surbooking, dormez tranquille.</p>
+                        <div class="mt-auto bg-slate-50 rounded-xl p-4 border border-slate-100">
+                            <div class="flex items-center justify-between text-sm mb-2">
+                                <span class="font-bold text-slate-700">Synchronisation</span>
+                                <span class="text-green-600 font-bold"><i class="fa-solid fa-circle text-[10px] mr-1"></i> Active</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                                <div class="bg-green-500 h-full w-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-xl mb-4">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Facturation Auto</h3>
+                    <p class="text-sm text-slate-600">Commissions calculées automatiquement. Factures générées en 1 clic.</p>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-xl mb-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Espace Propriétaire</h3>
+                    <p class="text-sm text-slate-600">Donnez un accès VIP à vos clients. Transparence totale, confiance absolue.</p>
+                </div>
+
+                <div class="md:col-span-2 md:row-span-1 bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 shadow-card text-white flex items-center justify-between relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                    <div class="relative z-10 max-w-xs">
+                        <h3 class="text-xl font-bold mb-2">100% Mobile Friendly</h3>
+                        <p class="text-slate-300 text-sm">Gérez vos urgences depuis votre smartphone, où que vous soyez.</p>
+                    </div>
+                    <div class="relative z-10 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition">
+                        <i class="fa-solid fa-mobile-screen text-3xl"></i>
+                    </div>
+                </div>
+
             </div>
             
-            <div class="space-y-6">
-                <div class="flex gap-4 items-start">
-                    <div class="mt-1 w-6 h-6 rounded-full bg-brand-success/20 flex items-center justify-center flex-shrink-0 text-brand-success font-bold text-xs"><i class="fa-solid fa-check"></i></div>
-                    <div>
-                        <h4 class="text-white font-bold text-lg">Une solution française et conforme</h4>
-                        <p class="text-slate-400 mt-1">Contrairement aux logiciels internationaux, nous comprenons les spécificités de la fiscalité et de la gestion immobilière en France.</p>
-                    </div>
-                </div>
-                <div class="flex gap-4 items-start">
-                    <div class="mt-1 w-6 h-6 rounded-full bg-brand-success/20 flex items-center justify-center flex-shrink-0 text-brand-success font-bold text-xs"><i class="fa-solid fa-check"></i></div>
-                    <div>
-                        <h4 class="text-white font-bold text-lg">Un tarif unique, sans commissions cachées</h4>
-                        <p class="text-slate-400 mt-1">Développez votre parc immobilier sans augmenter vos coûts logiciels. Notre tarif est fixe, peu importe votre nombre de lots.</p>
-                    </div>
-                </div>
-                <div class="flex gap-4 items-start">
-                    <div class="mt-1 w-6 h-6 rounded-full bg-brand-success/20 flex items-center justify-center flex-shrink-0 text-brand-success font-bold text-xs"><i class="fa-solid fa-check"></i></div>
-                    <div>
-                        <h4 class="text-white font-bold text-lg">Support technique réactif</h4>
-                        <p class="text-slate-400 mt-1">Une équipe dédiée pour vous accompagner dans le paramétrage de votre compte et la synchronisation de vos annonces.</p>
-                    </div>
-                </div>
+            <div class="text-center mt-12">
+                <a href="fonctionnalites.html" class="text-brand-primary font-bold hover:text-brand-secondary transition">Voir toutes les fonctionnalités <i class="fa-solid fa-arrow-right ml-1"></i></a>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-br from-brand-primary to-indigo-700 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à professionnaliser votre activité ?</h2>
-            <p class="text-indigo-100 text-lg mb-8 max-w-2xl mx-auto">Rejoignez les conciergeries qui gagnent du temps au quotidien grâce à LocaSmart.</p>
-            <a href="https://app.locasmart.net/register" class="inline-block bg-white text-brand-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition shadow-2xl">
-                Créer mon compte professionnel
-            </a>
-            <p class="text-sm text-indigo-200 mt-4 opacity-80">Essai gratuit 14 jours • Annulation sans frais</p>
-        </div>
-    </section>
-
-    <footer class="bg-brand-bg pt-16 pb-8 border-t border-white/5">
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-2">
-                    <a href="index.html" class="text-xl font-bold text-white flex items-center gap-2 mb-4">
-                        <i class="fa-solid fa-bolt text-brand-primary"></i> LocaSmart
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white"><i class="fa-solid fa-bolt text-xs"></i></div>
+                        <span class="text-xl font-bold text-slate-900">LocaSmart</span>
                     </a>
-                    <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
-                        Le système d'exploitation complet pour les conciergeries de location courte durée. Performance, simplicité et automatisation.
+                    <p class="text-slate-500 text-sm max-w-sm leading-relaxed">
+                        LocaSmart est la solution de gestion tout-en-un conçue en France pour les conciergeries ambitieuses.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Solution</h4>
-                    <ul class="space-y-3 text-sm text-slate-500">
-                        <li><a href="fonctionnalites.html" class="hover:text-brand-primary transition">Channel Manager</a></li>
-                        <li><a href="fonctionnalites.html" class="hover:text-brand-primary transition">Portail Propriétaires</a></li>
-                        <li><a href="tarifs.html" class="hover:text-brand-primary transition">Tarification</a></li>
+                    <h4 class="font-bold text-slate-900 mb-4">Produit</h4>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li><a href="fonctionnalites.html" class="hover:text-brand-primary">Fonctionnalités</a></li>
+                        <li><a href="tarifs.html" class="hover:text-brand-primary">Tarifs</a></li>
+                        <li><a href="https://app.locasmart.net" class="hover:text-brand-primary">Connexion</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Informations</h4>
-                    <ul class="space-y-3 text-sm text-slate-500">
-                        <li><a href="mentions.html" class="hover:text-white transition">Mentions Légales</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Support Client</a></li>
-                        <li><a href="https://app.locasmart.net" class="hover:text-white transition">Accès Client</a></li>
+                    <h4 class="font-bold text-slate-900 mb-4">Légal</h4>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li><a href="mentions.html" class="hover:text-brand-primary">Mentions Légales</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-primary">Support</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-600">
-                <p>&copy; 2025 LocaSmart. Tous droits réservés.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-slate-400 transition"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="hover:text-slate-400 transition"><i class="fa-brands fa-twitter"></i></a>
-                </div>
+            <div class="border-t border-slate-100 pt-8 text-center text-slate-400 text-sm">
+                &copy; 2025 LocaSmart. Fait avec passion en France 🇫🇷
             </div>
         </div>
     </footer>

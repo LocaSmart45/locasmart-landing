@@ -3,89 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Support | LocaSmart</title>
+    <title>Contact | LocaSmart</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: { brand: { bg: '#0F172A', surface: '#1E293B', primary: '#6366F1', primaryDark: '#4F46E5', accent: '#38BDF8' } }
+                    colors: { brand: { primary: '#4F46E5', secondary: '#7C3AED' } }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-brand-bg text-slate-300 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-white text-slate-600 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-brand-bg/95 backdrop-blur-md border-b border-white/5 shadow-sm">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-slate-100">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-9 h-9 bg-brand-primary rounded-lg flex items-center justify-center text-white"><i class="fa-solid fa-bolt text-sm"></i></div>
-                <span class="text-xl font-bold text-white tracking-tight">LocaSmart</span>
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white"><i class="fa-solid fa-bolt text-lg"></i></div>
+                <span class="text-xl font-bold text-slate-900">LocaSmart</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="fonctionnalites.html" class="hover:text-white transition">Fonctionnalités</a>
-                <a href="tarifs.html" class="hover:text-white transition">Tarifs</a>
-                <a href="contact.html" class="hover:text-white transition text-white">Contact</a>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600">
+                <a href="fonctionnalites.html" class="hover:text-brand-primary">Fonctionnalités</a>
+                <a href="tarifs.html" class="hover:text-brand-primary">Tarifs</a>
+                <a href="contact.html" class="text-brand-primary">Contact</a>
             </div>
             <div class="flex gap-4 items-center">
-                <a href="https://app.locasmart.net" class="text-sm font-semibold hover:text-white transition hidden sm:block">Connexion</a>
-                <a href="https://app.locasmart.net/register" class="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-lg text-sm font-bold transition">Essai gratuit</a>
+                <a href="https://app.locasmart.net" class="text-sm font-bold text-slate-600 hover:text-brand-primary hidden sm:block">Connexion</a>
+                <a href="https://app.locasmart.net/register" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl text-sm font-bold transition">Essai gratuit</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-32 pb-20">
-        <div class="container mx-auto px-6 max-w-4xl">
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-16">
-                <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">Contactez notre équipe</h1>
-                <p class="text-slate-400 text-lg">Une question sur le logiciel ou besoin d'une démo ? Nous sommes à votre écoute.</p>
+                <h1 class="text-4xl font-extrabold text-slate-900 mb-6">Contactez l'équipe</h1>
+                <p class="text-lg text-slate-500">Nous sommes basés en France et répondons en moins de 24h.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                        <i class="fa-solid fa-envelope text-brand-primary text-2xl mb-4"></i>
-                        <h3 class="text-white font-bold text-lg mb-2">Support Commercial</h3>
-                        <p class="text-slate-400 text-sm mb-4">Pour toute question avant de vous inscrire.</p>
-                        <a href="mailto:contact@locasmart.net" class="text-brand-accent hover:underline">contact@locasmart.net</a>
-                    </div>
-                    <div class="bg-brand-surface p-6 rounded-2xl border border-white/5">
-                        <i class="fa-solid fa-headset text-brand-primary text-2xl mb-4"></i>
-                        <h3 class="text-white font-bold text-lg mb-2">Support Technique</h3>
-                        <p class="text-slate-400 text-sm mb-4">Déjà client ? Connectez-vous à votre espace pour une assistance prioritaire.</p>
-                        <a href="https://app.locasmart.net" class="text-brand-accent hover:underline">Accéder au support client</a>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Nos coordonnées</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-primary">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900">Email</p>
+                                <a href="mailto:contact@locasmart.net" class="text-brand-primary hover:underline">contact@locasmart.net</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-primary">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900">Siège</p>
+                                <p class="text-slate-600">LocaSmart France<br>45000 Orléans, France</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <form class="bg-brand-surface p-8 rounded-2xl border border-white/5">
-                    <div class="mb-6">
-                        <label class="block text-white text-sm font-bold mb-2">Email Professionnel</label>
-                        <input type="email" class="w-full bg-brand-bg border border-white/10 rounded-lg p-3 text-white focus:border-brand-primary focus:outline-none transition" placeholder="nom@entreprise.com">
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-white text-sm font-bold mb-2">Sujet</label>
-                        <select class="w-full bg-brand-bg border border-white/10 rounded-lg p-3 text-white focus:border-brand-primary focus:outline-none transition">
-                            <option>Demande d'information</option>
-                            <option>Partenariat</option>
-                            <option>Presse</option>
-                        </select>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-white text-sm font-bold mb-2">Message</label>
-                        <textarea class="w-full bg-brand-bg border border-white/10 rounded-lg p-3 text-white focus:border-brand-primary focus:outline-none transition h-32" placeholder="Comment pouvons-nous vous aider ?"></textarea>
-                    </div>
-                    <button type="button" class="w-full bg-brand-primary hover:bg-brand-primaryDark text-white font-bold py-3 rounded-lg transition">Envoyer le message</button>
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <footer class="mt-auto bg-brand-bg pt-16 pb-8 border-t border-white/5">
-        <div class="container mx-auto px-6 text-center text-slate-600 text-sm">© 2025 LocaSmart. Tous droits réservés.</div>
-    </footer>
-</body>
-</html>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl">
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Votre Email</label>
+                            <input type="email" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition" placeholder="jean@conciergerie.com">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                            <textarea class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 h-32 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-

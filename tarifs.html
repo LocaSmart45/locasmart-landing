@@ -3,95 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarifs & Abonnement | LocaSmart</title>
+    <title>Tarifs & FAQ | LocaSmart</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: { brand: { bg: '#0F172A', surface: '#1E293B', primary: '#6366F1', primaryDark: '#4F46E5', accent: '#38BDF8' } }
+                    colors: { brand: { primary: '#4F46E5', secondary: '#7C3AED' } }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-brand-bg text-slate-300 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-white text-slate-600 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-brand-bg/95 backdrop-blur-md border-b border-white/5 shadow-sm">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-lg border-b border-slate-100">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-9 h-9 bg-brand-primary rounded-lg flex items-center justify-center text-white"><i class="fa-solid fa-bolt text-sm"></i></div>
-                <span class="text-xl font-bold text-white tracking-tight">LocaSmart</span>
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white"><i class="fa-solid fa-bolt text-lg"></i></div>
+                <span class="text-xl font-bold text-slate-900">LocaSmart</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="fonctionnalites.html" class="hover:text-white transition">Fonctionnalités</a>
-                <a href="tarifs.html" class="hover:text-white transition text-white">Tarifs</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600">
+                <a href="fonctionnalites.html" class="hover:text-brand-primary">Fonctionnalités</a>
+                <a href="tarifs.html" class="text-brand-primary">Tarifs</a>
+                <a href="contact.html" class="hover:text-brand-primary">Contact</a>
             </div>
             <div class="flex gap-4 items-center">
-                <a href="https://app.locasmart.net" class="text-sm font-semibold hover:text-white transition hidden sm:block">Connexion</a>
-                <a href="https://app.locasmart.net/register" class="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-lg text-sm font-bold transition">Essai gratuit</a>
+                <a href="https://app.locasmart.net" class="text-sm font-bold text-slate-600 hover:text-brand-primary hidden sm:block">Connexion</a>
+                <a href="https://app.locasmart.net/register" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl text-sm font-bold transition">Essai gratuit</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-32 pb-20">
+    <main class="pt-32 pb-24 bg-slate-50">
         <div class="container mx-auto px-6 text-center max-w-4xl">
-            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">Une tarification simple et prévisible</h1>
-            <p class="text-slate-400 text-lg mb-16 max-w-2xl mx-auto">Pas de frais d'installation. Pas de coût par logement supplémentaire. Accédez à la puissance d'un PMS complet pour un tarif unique.</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Un tarif clair. Sans surprises.</h1>
+            <p class="text-xl text-slate-500 mb-16 max-w-2xl mx-auto">Arrêtez de payer des commissions sur vos réservations. Passez au forfait fixe.</p>
 
-            <div class="max-w-md mx-auto bg-brand-surface border border-brand-primary rounded-2xl p-8 relative shadow-2xl shadow-indigo-500/10 overflow-hidden">
-                <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-brand-primary to-brand-accent"></div>
-                <div class="absolute top-4 right-4 bg-indigo-500/10 text-brand-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Offre Professionnelle</div>
-                
-                <h3 class="text-2xl font-bold text-white mb-2 text-left">Abonnement Mensuel</h3>
-                <p class="text-slate-400 text-sm text-left mb-6">Tout illimité pour gérer votre parc.</p>
-                
-                <div class="flex items-baseline gap-1 mb-8 text-left">
-                    <span class="text-5xl font-bold text-white">29,99€</span>
-                    <span class="text-slate-500 font-medium">/ mois HT</span>
+            <div class="bg-white rounded-3xl shadow-xl border border-indigo-100 overflow-hidden max-w-lg mx-auto transform hover:scale-105 transition duration-300">
+                <div class="bg-indigo-600 p-4 text-white text-sm font-bold uppercase tracking-widest">
+                    Offre de lancement
                 </div>
-
-                <ul class="space-y-4 text-left text-slate-300 mb-8 border-t border-white/5 pt-8">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-primary"></i> <strong>Biens illimités</strong> (Appartements, Villas...)</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-primary"></i> <strong>Channel Manager</strong> (Synchro temps réel)</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-primary"></i> <strong>Portail Propriétaires</strong> inclus</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-primary"></i> <strong>Support</strong> technique prioritaire</li>
-                </ul>
-
-                <div class="bg-slate-900/50 rounded-xl p-4 mb-6 border border-white/5 text-left">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-lock text-brand-primary text-sm"></i>
-                        <span class="text-white font-bold text-sm">Période d'essai sécurisée</span>
+                <div class="p-10">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">LocaSmart PRO</h3>
+                    <div class="flex justify-center items-baseline gap-1 mb-8">
+                        <span class="text-6xl font-extrabold text-indigo-600">29,99€</span>
+                        <span class="text-slate-500 font-medium">/ mois</span>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Pour activer votre espace professionnel, une méthode de paiement valide est requise. 
-                        <span class="text-slate-300">Aucun montant ne sera débité durant les 14 jours d'essai.</span> 
-                        Vous pouvez annuler à tout moment depuis votre compte.
-                    </p>
-                </div>
+                    
+                    <ul class="text-left space-y-4 mb-10 text-slate-600">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> <span>Biens <strong>illimités</strong></span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> <span>Channel Manager temps réel</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> <span>Portail Propriétaires inclus</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500 text-xl"></i> <span>Support prioritaire</span></li>
+                    </ul>
 
-                <a href="https://app.locasmart.net/register" class="block w-full bg-brand-primary hover:bg-brand-primaryDark text-white font-bold py-4 rounded-xl transition shadow-lg text-center">
-                    Commencer l'essai gratuit
-                </a>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-left mb-8">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fa-solid fa-lock text-slate-700"></i>
+                            <span class="font-bold text-slate-900 text-sm">Garantie 14 jours</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Une carte bancaire est requise pour activer le compte (protection anti-spam). <strong>0€ débité aujourd'hui.</strong> Vous recevez un email 3 jours avant la fin de l'essai.
+                        </p>
+                    </div>
+
+                    <a href="https://app.locasmart.net/register" class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl transition shadow-lg">
+                        Activer mon essai gratuit
+                    </a>
+                </div>
             </div>
-            
-            <div class="mt-12 flex justify-center items-center gap-3 text-sm text-slate-500">
-                <i class="fa-solid fa-shield-halved"></i> Paiements sécurisés par Stripe
+
+            <div class="mt-24 text-left max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">Questions Fréquentes</h3>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 mb-2">Pourquoi demandez-vous la CB pour un essai gratuit ?</h4>
+                        <p class="text-sm text-slate-600">LocaSmart est un outil professionnel connecté à des API bancaires et immobilières coûteuses. La CB nous permet de vérifier que vous êtes une entreprise sérieuse et d'éviter les comptes robots. Rien n'est débité.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 mb-2">Puis-je annuler facilement ?</h4>
+                        <p class="text-sm text-slate-600">Oui. Un bouton "Résilier" est disponible dans vos paramètres. L'accès se coupe à la fin de la période, sans frais cachés.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 mb-2">Le prix augmente-t-il si j'ajoute des logements ?</h4>
+                        <p class="text-sm text-slate-600">Non. Contrairement à nos concurrents, notre tarif est fixe. Que vous ayez 2 ou 50 appartements, c'est 29,99€.</p>
+                    </div>
+                </div>
             </div>
-            <div class="mt-4 flex justify-center gap-6 opacity-40 grayscale">
-                <i class="fa-brands fa-cc-visa text-3xl"></i>
-                <i class="fa-brands fa-cc-mastercard text-3xl"></i>
-                <i class="fa-brands fa-cc-amex text-3xl"></i>
-            </div>
+
         </div>
     </main>
 
-    <footer class="mt-auto bg-brand-bg pt-16 pb-8 border-t border-white/5">
-        <div class="container mx-auto px-6 text-center text-slate-600 text-sm">© 2025 LocaSmart. Tous droits réservés.</div>
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="container mx-auto px-6 text-center text-slate-400 text-sm">
+            &copy; 2025 LocaSmart.
+        </div>
     </footer>
 </body>
 </html>
