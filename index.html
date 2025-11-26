@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>LocaSmart | Logiciel de Conciergerie & Channel Manager (PMS)</title>
-    <meta name="description" content="Automatisez votre conciergerie locative : Synchronisation Airbnb/Booking, Facturation propriétaires et Channel Manager intégré. Essai gratuit 14 jours.">
-    <meta name="keywords" content="logiciel conciergerie, channel manager, pms location courte durée, gestion locative, airbnb, booking, facturation">
+    <title>LocaSmart | Logiciel de Conciergerie, Facturation & Interventions</title>
+    <meta name="description" content="La solution complète : Synchronisation calendriers, Gestion du ménage/maintenance et Facturation propriétaires. Essai gratuit 14 jours.">
+    <meta name="keywords" content="logiciel conciergerie, planning ménage, facturation propriétaire, channel manager ical, gestion maintenance">
     <meta name="author" content="LocaSmart France">
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.locasmart.net/">
-    <meta property="og:title" content="LocaSmart - Le Pilote Automatique de votre Conciergerie">
-    <meta property="og:description" content="Gagnez 10h/semaine. Channel Manager, Facturation Auto et Portail Propriétaires.">
+    <meta property="og:title" content="LocaSmart - Gérez vos biens et vos équipes">
+    <meta property="og:description" content="Synchronisation, Facturation et Gestion des Interventions (Ménage/Travaux).">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -26,10 +26,10 @@
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
                     colors: { 
                         brand: { 
-                            primary: '#4F46E5',   // Indigo vibrant
-                            secondary: '#7C3AED', // Violet profond
-                            dark: '#0F172A',      // Slate 900
-                            surface: '#F8FAFC'    // Slate 50
+                            primary: '#4F46E5',
+                            secondary: '#7C3AED',
+                            dark: '#0F172A',
+                            surface: '#F8FAFC'
                         } 
                     },
                     boxShadow: {
@@ -40,28 +40,6 @@
             }
         }
     </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "LocaSmart",
-      "operatingSystem": "Web",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "29.99",
-        "priceCurrency": "EUR"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "24"
-      },
-      "description": "Logiciel SaaS de gestion pour conciergeries de location courte durée."
-    }
-    </script>
-
     <style>
         .gradient-text { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-bg { background: radial-gradient(circle at 50% 0%, #F5F3FF 0%, #FFFFFF 60%); }
@@ -98,7 +76,7 @@
             
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-indigo-100 shadow-sm text-xs font-bold text-brand-primary mb-8 animate-bounce" style="animation-duration: 3s;">
                 <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
-                Nouvelle version : Facturation automatique V2 disponible
+                Nouveau : Module de gestion ménage & maintenance
             </div>
 
             <h1 class="text-4xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
@@ -107,8 +85,8 @@
             </h1>
             
             <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed px-4">
-                Centralisez Airbnb, Booking et Expedia. Automatisez la facturation propriétaires. 
-                Gagnez du temps pour ce qui compte vraiment : <strong>votre croissance</strong>.
+                Synchronisez vos calendriers, facturez vos propriétaires et <strong>gérez vos équipes de ménage</strong>.
+                Tout votre business, sur une seule plateforme.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 px-4">
@@ -120,7 +98,7 @@
                 </a>
             </div>
 
-            <div class="relative max-w-6xl mx-auto" id="demo">
+            <div class="relative max-w-6xl mx-auto mt-16" id="demo">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl blur-2xl opacity-20"></div>
                 
                 <div class="relative bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col md:flex-row h-auto md:h-[650px] text-left">
@@ -138,18 +116,15 @@
                                 <i class="fa-solid fa-calendar-days"></i> Planning
                             </div>
                             <div class="px-4 py-2 text-slate-500 hover:bg-slate-100 rounded-lg font-medium text-sm flex items-center gap-3 transition">
-                                <i class="fa-solid fa-building"></i> Logements
+                                <i class="fa-solid fa-broom"></i> Ménage & Travaux
                             </div>
                             <div class="px-4 py-2 text-slate-500 hover:bg-slate-100 rounded-lg font-medium text-sm flex items-center gap-3 transition">
-                                <i class="fa-solid fa-users"></i> Propriétaires
+                                <i class="fa-solid fa-file-invoice"></i> Finances
                             </div>
                         </div>
                         <div class="mt-auto bg-brand-dark rounded-xl p-4 text-white">
                             <p class="text-xs text-slate-400 uppercase font-bold mb-1">Revenus (Nov)</p>
                             <p class="text-2xl font-bold">14 250 €</p>
-                            <div class="w-full bg-slate-700 h-1 mt-3 rounded-full overflow-hidden">
-                                <div class="bg-green-400 h-full w-[70%]"></div>
-                            </div>
                         </div>
                     </div>
 
@@ -159,7 +134,6 @@
                             <div class="flex items-center gap-3">
                                 <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                                 <span class="text-xs font-bold text-slate-500 hidden md:block">Système opérationnel</span>
-                                <span class="text-xs font-bold text-slate-500 md:hidden">En ligne</span>
                             </div>
                         </div>
 
@@ -169,14 +143,15 @@
                                     <p class="text-xs text-slate-400 font-bold uppercase mb-2">Taux d'occupation</p>
                                     <div class="flex items-end gap-2">
                                         <span class="text-3xl font-bold text-slate-900">88%</span>
-                                        <span class="text-green-500 text-xs font-bold mb-1"><i class="fa-solid fa-arrow-trend-up"></i> +5%</span>
+                                        <span class="text-green-500 text-xs font-bold mb-1">+5%</span>
                                     </div>
                                 </div>
-                                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                                    <p class="text-xs text-slate-400 font-bold uppercase mb-2">Arrivées Aujourd'hui</p>
+                                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 w-16 h-16 bg-orange-50 rounded-bl-full -mr-8 -mt-8"></div>
+                                    <p class="text-xs text-slate-400 font-bold uppercase mb-2">Interventions</p>
                                     <div class="flex items-end gap-2">
-                                        <span class="text-3xl font-bold text-slate-900">4</span>
-                                        <span class="text-slate-400 text-xs font-bold mb-1">Voyageurs</span>
+                                        <span class="text-3xl font-bold text-slate-900">3</span>
+                                        <span class="text-slate-500 text-xs font-bold mb-1">À faire ce jour</span>
                                     </div>
                                 </div>
                                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
@@ -190,38 +165,28 @@
 
                             <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
                                 <div class="px-4 md:px-6 py-4 border-b border-slate-100 flex justify-between">
-                                    <h3 class="font-bold text-slate-800">Dernières Réservations</h3>
+                                    <h3 class="font-bold text-slate-800">Interventions du jour</h3>
                                 </div>
                                 <div class="divide-y divide-slate-50">
                                     <div class="px-4 md:px-6 py-4 flex items-center justify-between">
                                         <div class="flex items-center gap-3 md:gap-4">
-                                            <div class="w-10 h-10 bg-rose-50 rounded-lg flex items-center justify-center text-rose-500 text-lg md:text-xl"><i class="fa-brands fa-airbnb"></i></div>
+                                            <div class="w-8 h-8 md:w-10 md:h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500"><i class="fa-solid fa-broom"></i></div>
                                             <div>
-                                                <p class="font-bold text-slate-900 text-sm">Loft Industriel</p>
-                                                <p class="text-xs text-slate-500 hidden md:block">Marie C. • 12 - 15 Nov</p>
+                                                <p class="font-bold text-slate-900 text-sm">Ménage de sortie</p>
+                                                <p class="text-xs text-slate-500">Loft Industriel • 11h00</p>
                                             </div>
                                         </div>
-                                        <span class="px-2 md:px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] md:text-xs font-bold">Confirmé</span>
+                                        <span class="px-2 md:px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[10px] md:text-xs font-bold">À faire</span>
                                     </div>
                                     <div class="px-4 md:px-6 py-4 flex items-center justify-between">
                                         <div class="flex items-center gap-3 md:gap-4">
-                                            <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 text-lg md:text-xl"><i class="fa-brands fa-booking"></i></div>
+                                            <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-500"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                                             <div>
-                                                <p class="font-bold text-slate-900 text-sm">Villa Piscine</p>
-                                                <p class="text-xs text-slate-500 hidden md:block">John D. • 18 - 24 Nov</p>
+                                                <p class="font-bold text-slate-900 text-sm">Réparation Wifi</p>
+                                                <p class="text-xs text-slate-500">Villa Piscine • 14h00</p>
                                             </div>
                                         </div>
-                                        <span class="px-2 md:px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-[10px] md:text-xs font-bold">En attente</span>
-                                    </div>
-                                     <div class="px-4 md:px-6 py-4 flex items-center justify-between">
-                                        <div class="flex items-center gap-3 md:gap-4">
-                                            <div class="w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-brand-primary text-lg md:text-xl"><i class="fa-solid fa-globe"></i></div>
-                                            <div>
-                                                <p class="font-bold text-slate-900 text-sm">Site Direct</p>
-                                                <p class="text-xs text-slate-500 hidden md:block">Sophie L. • 01 - 03 Dec</p>
-                                            </div>
-                                        </div>
-                                        <span class="px-2 md:px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] md:text-xs font-bold">Confirmé</span>
+                                        <span class="px-2 md:px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] md:text-xs font-bold">Terminé</span>
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +199,7 @@
 
     <div class="bg-brand-dark py-12">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] mb-8">Compatible avec les leaders du marché</p>
+            <p class="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] mb-8">Synchronisation compatible avec</p>
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
                 <i class="fa-brands fa-airbnb text-4xl text-white"></i>
                 <i class="fa-brands fa-stripe text-4xl text-[#635BFF]"></i>
@@ -247,33 +212,41 @@
     <section class="py-24 bg-brand-surface">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Tout ce qu'il faut. Rien de superflu.</h2>
-                <p class="text-lg text-slate-600">Un logiciel conçu pour remplacer Excel, pas pour le recréer en plus compliqué.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Un écosystème complet.</h2>
+                <p class="text-lg text-slate-600">Plus besoin de 3 logiciels différents. Tout est là.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition group">
-                    <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-brand-primary text-2xl mb-6 group-hover:scale-110 transition">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-brand-primary text-xl mb-4">
                         <i class="fa-solid fa-sync"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Channel Manager</h3>
-                    <p class="text-slate-600 leading-relaxed">Une réservation arrive sur Airbnb ? Elle bloque instantanément Booking. Fini le stress du double booking.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Sync Calendriers</h3>
+                    <p class="text-sm text-slate-600">Centralisez vos iCal Airbnb et Booking. Évitez les erreurs manuelles.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition group">
-                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:scale-110 transition">
+                <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 text-xl mb-4">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Ménage & Travaux</h3>
+                    <p class="text-sm text-slate-600">Planifiez les interventions. Vos équipes savent quoi faire et où.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600 text-xl mb-4">
                         <i class="fa-solid fa-file-invoice-dollar"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Facturation Auto</h3>
-                    <p class="text-slate-600 leading-relaxed">Commissions, ménage, taxes... LocaSmart calcule tout et génère les factures pour vos propriétaires.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Facturation Auto</h3>
+                    <p class="text-sm text-slate-600">Générez les relevés propriétaires en fin de mois sans effort.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition group">
-                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-6 group-hover:scale-110 transition">
+                <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100 hover:border-brand-primary/50 transition">
+                    <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 text-xl mb-4">
                         <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Portail Propriétaires</h3>
-                    <p class="text-slate-600 leading-relaxed">Donnez un accès sécurisé à vos clients. Ils voient leurs revenus en temps réel. Moins d'appels, plus de confiance.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Espace Clients</h3>
+                    <p class="text-sm text-slate-600">Un accès sécurisé pour vos propriétaires. La transparence totale.</p>
                 </div>
             </div>
             
@@ -292,7 +265,7 @@
                         <span class="text-xl font-bold text-slate-900">LocaSmart</span>
                     </a>
                     <p class="text-slate-500 text-sm max-w-sm mx-auto md:mx-0 leading-relaxed">
-                        Le système d'exploitation complet pour les conciergeries de location courte durée. Conçu et hébergé en France.
+                        Le système d'exploitation complet pour les conciergeries. Développé en France.
                     </p>
                 </div>
                 <div>
